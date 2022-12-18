@@ -12,11 +12,11 @@ class SmartphoneListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Smartphone
         fields = "title price color slug".split()
-        
+
 
 class SmartphoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Smartphone
-        fields = "__all__"
-        
-        
+        fields = ('title', 'slug', 'image', 'price', 'color', 'memory', 'quantity', 'in_stock', 'brand',
+                  'description', 'created_at', 'updated_at', 'smart_images')
+
